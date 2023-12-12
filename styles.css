@@ -1,0 +1,210 @@
+:root{
+    --teksti: #333333 ;
+    --tausta: #eeeeee ;
+    --teksti-vaalea: #dddddd;
+    --bg-dark: #444444 ;
+    --highlight: #87af19;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.v-center{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.h-right{
+    position: absolute;
+    right: 0;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--tausta);
+    color: var(--teksti);
+
+}
+header{
+    background-color: var(--bg-dark);
+    padding: 10px;
+    color: var(--teksti-vaalea);
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: var(--highlight) solid 5px;
+}
+header .logo {
+    float: left;
+    font-size: 2em;
+
+}
+
+header .logo img {
+    height: 70px;
+    padding: 5px;
+    display: block;
+    float: left;
+}
+
+.container{
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr ;
+    grid-template-columns: 1fr 2fr;
+    text-align: center;
+}
+
+.item1 {
+    background-color: #555555;
+    border: 1px solid var(--teksti);
+    color: #eeeeee;
+    font-size: 1em;
+}
+
+.item2 {
+    background-color: #777777;
+    border: 1px solid var(--teksti);
+    color: #eeeeee;
+    font-size: 1em;
+}
+
+header nav a {
+    display: inline-block;
+    font-size: 1.5em;
+    color: var(--teksti-vaalea);
+    text-decoration: none;
+    padding: 0.5em;
+
+
+}
+
+header nav a:hover{
+    color: var(--teksti);
+    background-color: var(--highlight);
+}
+
+main{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding-top: 80px;
+}
+
+section{
+    max-width: 1100px;
+    width: 70%;
+    margin: 20px  auto;
+
+}
+
+.showcase{
+    padding-top: 20px;
+    display: block;
+}
+
+
+.ingessi{
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.6em;
+}
+.ingessi::first-letter{
+    float: left;
+    font-size: 3.2em;
+    line-height: 1em;
+    font-weight: bold;
+    margin-right: 0.1em;
+}
+
+.tutkinnonosat {
+    display: block;
+    padding-top: 20px;
+}
+
+.tutkinnonosat a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    border: 1px solid var(--teksti);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+
+}
+.tutkinnonosat a:hover{
+    color: var(--teksti);
+    background-color: var(--highlight);
+}
+footer{
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width:800px){
+    header,header > div.logo, header > nav, header nav a{
+        display: block;
+        float: none;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        clear: both;
+    }
+
+    .showcase {
+        padding-top: 300px;
+    }
+
+    .v-center,  .h-right {
+        display: block;
+        position: relative;
+        transform: none;
+    }
+
+    header a {
+        padding: 5px 0;
+    }
+
+    main{
+        font-size: 1.0em;
+        line-height: 1.0em;
+        padding-top: 80px;
+    }
+    
+    .container{
+        justify-content: center;
+        padding-top: 250px;
+        padding-bottom: 100px;
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr ;
+        grid-template-columns: 1fr 2fr;
+        text-align: center;
+    }
+    
+    .item1 {
+        background-color: #555555;
+        border: 1px solid var(--teksti);
+        color: #eeeeee;
+        font-size: 0.5em;
+    }
+    
+    .item2 {
+        background-color: #777777;
+        border: 1px solid var(--teksti);
+        color: #eeeeee;
+        font-size: 0.5em;
+    }
+}
